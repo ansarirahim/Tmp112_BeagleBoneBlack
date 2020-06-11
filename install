@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Temperature Measurement Installation..."
+cp usr/bin/GET_TEMP /usr/bin/GET_TEMP
+echo "Bin File installed.."
+chmod u+x /usr/bin/GET_TEMP
+rm -R usr
+echo "Cleaned temp files..."
+chmod +x build
+./build
+echo "Finished Installation"
