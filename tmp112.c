@@ -16,7 +16,7 @@ void main()
 {
 	// Create I2C bus
 	int file;
-	char *bus = "/dev/i2c-1";
+	char *bus = "/dev/i2c-2";
 	if((file = open(bus, O_RDWR)) < 0) 
 	{
 		printf("Failed to open the i2c bus. \r\n");
@@ -57,7 +57,7 @@ void main()
 		float fTemp = (cTemp * 1.8) + 32;
 	
 		// Output data to screen
-		printf("TEMP=%.4f\r\n", cTemp);
+		printf("TEMP=%.2f\r\n", cTemp);
 		//printf("Temperature in Fahrenheit : %.2f F \n", fTemp);
 	}
 }
